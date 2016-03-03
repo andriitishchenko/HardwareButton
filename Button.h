@@ -3,6 +3,7 @@
 * Copyright (c) by Andrii Tishchenko, 2016
 * This work is licensed under a BSD style license.
 * https://github.com/andriitishchenko/HardwareButton
+* https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
 * https://123d.circuits.io/circuits/1691281-single-double-long-button
 */
 

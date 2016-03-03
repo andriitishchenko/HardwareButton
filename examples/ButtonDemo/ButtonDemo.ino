@@ -1,8 +1,11 @@
  #include "hardware.h"
 
-//DEMO APPLICATION
-//details here 
-//https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press/edit
+/*
+* DEMO APPLICATION
+* example
+* https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
+* https://123d.circuits.io/circuits/1691281-single-double-long-button
+*/
 
 //button declaration
 Hardware::Button button(2, false);

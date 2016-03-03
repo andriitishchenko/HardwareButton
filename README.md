@@ -4,6 +4,9 @@ Hardware::Button - Library for detecting button clicks, multiple clicks and long
 # Example
 https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
 
+https://123d.circuits.io/circuits/1691281-single-double-long-button
+
 # Usage 
 1 Install library
+
 2 open demo project "HardwareButton->ButtonDemo"

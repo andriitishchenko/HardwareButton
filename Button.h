@@ -1,8 +1,9 @@
-/* 
+/*
 * Hardware::Button - Library for detecting button clicks, multiple clicks and long press on a button for use with the Arduino environment.
 * Copyright (c) by Andrii Tishchenko, 2016
 * This work is licensed under a BSD style license.
 * https://github.com/andriitishchenko/HardwareButton
+* https://123d.circuits.io/circuits/1691281-single-double-long-button
 */
 
 #ifndef Button_h
@@ -16,11 +17,11 @@
 |- class Button;
 */
 namespace Hardware {
-  class Button;
-  extern "C" {
-    typedef void (*callbackEvent)(Button&);
-    typedef unsigned long ulong;
-  }
+class Button;
+extern "C" {
+  typedef void (*callbackEvent)(Button&);
+  typedef unsigned long ulong;
+}
 
 /*
 class Button provide a simple way to handle hardware button iteractions
@@ -42,7 +43,7 @@ public:
   // pin: hardware pin
   // activeLow: depends on HIGH or LOW connection state
   Button(int pin, int activeLow);
-  
+
   // pin: hardware pin
   // LOW load for connection state
   Button(int pin);
@@ -80,7 +81,7 @@ public:
   // press count for multiple presses
   int pressCount;
 
-  // button status 
+  // button status
   // readonly
   bool isPressed;
 
@@ -91,14 +92,14 @@ private:
   int _pressTimeout; //press button speed setting (600)
   int _longPressTimeout; //long press delay setting (100)
   int _multiPressTimeout; //delay between multiple press (260)
-  
+
   //button states
   int _buttonReleased;
   int _buttonPressed;
 
   //helper vars
-  ulong _startTime; 
-  ulong _releaseTime; 
+  ulong _startTime;
+  ulong _releaseTime;
 };
 }
 #endif

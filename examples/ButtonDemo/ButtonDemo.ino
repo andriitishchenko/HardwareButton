@@ -34,10 +34,10 @@ void onMultiplePress(Hardware::Button& sender)
 
 void setup() {
   Serial.begin(9600);
-  button.onPress = onPress;
-  button.onLongPress=onLongPress;
-  button.onLongPressing=onLongPressing;
-  button.onMultiplePress=onMultiplePress;
+  button.onPress = &onPress;
+  button.onLongPress = &onLongPress;
+  button.onLongPressing = &onLongPressing;
+  button.onMultiplePress = &onMultiplePress;
   
   //optional settings
   button.id = 100;

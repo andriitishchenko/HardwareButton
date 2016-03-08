@@ -12,7 +12,7 @@
 namespace Hardware
 {
 
-Button& Button::init(int pin, int activeLow) {
+void Button::init(int pin, int activeLow) {
   pinMode(pin, INPUT);
   _pin = pin;
 

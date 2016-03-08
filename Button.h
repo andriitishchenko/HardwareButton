@@ -18,7 +18,7 @@
 |- class Button;
 */
 namespace Hardware {
-class Button;
+typedef class Button Button;
 extern "C" {
   typedef void (*callbackEvent)(Button&);
   typedef unsigned long ulong;
@@ -87,7 +87,7 @@ public:
   bool isPressed;
 
 private:
-  Button& init(int pin, int activeLow);
+  void init(int pin, int activeLow);
 
   int _pin; //hardware pin
   int _pressTimeout; //press button speed setting (600)

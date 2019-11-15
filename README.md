@@ -2,10 +2,20 @@
 Hardware::Button - Library for detecting button clicks, multiple clicks and long press on a button for use with the Arduino environment.
 
 # Example
-https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
+```
+Hardware::Button button = Hardware::Button(2);
+//  
+  button.onPress = &onPress;
+  button.onLongPress = &onLongPress;
+  button.onLongPressing = &onLongPressing;
+  button.onMultiplePress = &onMultiplePress;
 
-https://123d.circuits.io/circuits/1691281-single-double-long-button
-
+//optional settings
+  button.id = 100;
+  button.setPressTimeout(600);
+  button.setLongPressTimeout(1000);
+  button.setMultiPressTimeout(260);
+```
 # Usage 
 1 Install library
 

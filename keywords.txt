@@ -1,0 +1,6 @@
+Button	KEYWORD1
+
+click	KEYWORD2
+doubleclick	KEYWORD2
+press	KEYWORD2
+longpress	KEYWORD2

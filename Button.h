@@ -3,8 +3,6 @@
 * Copyright (c) by Andrii Tishchenko, 2016
 * This work is licensed under a BSD style license.
 * https://github.com/andriitishchenko/HardwareButton
-* https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
-* https://123d.circuits.io/circuits/1691281-single-double-long-button
 */
 
 #ifndef Button_h
@@ -18,10 +16,14 @@
 |- class Button;
 */
 namespace Hardware {
-typedef class Button Button;
 extern "C" {
-  typedef void (*callbackEvent)(Button&);
+  class Button;
+  typedef void (*callbackButtonEvent)(Button&);
+
+#ifndef ulong_type
+#define ulong_type
   typedef unsigned long ulong;
+#endif
 }
 
 /*
@@ -65,16 +67,16 @@ public:
   void setMultiPressTimeout(int value);
 
   // callback for button press
-  callbackEvent onPress;
+  callbackButtonEvent onPress;
 
   // callback for button long press
-  callbackEvent onLongPress;
+  callbackButtonEvent onLongPress;
 
   // callback while button holding pressed
-  callbackEvent onLongPressing;
+  callbackButtonEvent onLongPressing;
 
   // callback for on multiple press, count of press get from property .pressCount
-  callbackEvent onMultiplePress;
+  callbackButtonEvent onMultiplePress;
 
   //button identifier
   int id;

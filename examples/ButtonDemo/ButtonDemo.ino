@@ -1,13 +1,10 @@
-#include "hardware.h"
+#include "Button.h"
 
 /*
 * DEMO APPLICATION
-* example
-* https://123d.circuits.io/circuits/445550-button-class-press-long-press-double-press
-* https://123d.circuits.io/circuits/1691281-single-double-long-button
 */
-Hardware::Button button = Hardware::Button(2, false);
-Hardware::Button *button_pt = new Hardware::Button(2, false);
+Hardware::Button button = Hardware::Button(2);
+Hardware::Button *button_pt = new Hardware::Button(3, false);
 void onPress(Hardware::Button& sender)
 {
   Serial.print(" onPress ");
@@ -64,4 +61,3 @@ void loop() {
   button_pt->update();
   delay(100);
 }
-
